@@ -9,7 +9,7 @@
 
 namespace Gsta {
 
-		void GameStart();
+	
 		void Gmap();
 		void GameSta(); //最开始的界面
 		void GameHom(); //玩家界面

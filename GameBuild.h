@@ -6,11 +6,13 @@
 #include <stdlib.h>  
 #include<iomanip>
 #include<string>
+#include <string.h>
+#include <cstring>
 #include <afx.h>
-
 #include <locale>
 #include <cstdlib>
 #include<vector>
+#include <fstream>
 
 #pragma comment(lib, "sqlite3.lib")
 using namespace std;
@@ -26,11 +28,8 @@ namespace Gbui
 	int SelectUser(int bu);  //抽出大建出的数据
 	void BRandom();			 //生成随机数,用来大建0v0
 	int LA_T(int l);	//辣条计数专用函数只要998
-
-	char* G2U(const char* gb2312);
-	char* U2G(const char* utf8);
 	void ExecSQL(char *sql);
 	char **SrawQuery(char *sql, int *row, int *column, char **result);
-	void SQL_();
+	string RetBu(string BU);
 	//string SGO;
 }

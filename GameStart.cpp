@@ -7,16 +7,12 @@ using namespace Gcom;
 using namespace Gsta;
 
 typedef void(*gc)();	//定义gc
-void Gsta::GameStart()
-{	
-	GameStory::GameStory();
-}
 
 void Gsta::Gmap() {
 	
 		map<string, gc>Gcm;		//新建map并且使string对应函数
 		Gcm["Start"] = Gcom::Start;
-		Gcm["Continue"] = Gcom::Continue;
+		Gcm["Load"] = Gcom::Load;
 		Gcm["Help"] = Gcom::Help;
 		Gcm["Exit"] = Gcom::Exit;
 
@@ -42,7 +38,7 @@ void Gsta::GameSta()
 {
 	map<string, gc>Gcm;		//新建map并且使string对应函数
 	Gcm["Start"] = Gcom::Start;
-	Gcm["Continue"] = Gcom::Continue;
+	Gcm["Load"] = Gcom::Load;
 	Gcm["Help"] = Gcom::Help;
 	Gcm["Exit"] = Gcom::Exit;
 
@@ -81,23 +77,25 @@ void Gsta::GameHom()
 
 		cout << "          *                     1.舰队编辑(SGedit )                  *\n"
 			 << "          *                     2.大建一发(SGbuild)                  *\n"
-			 << "          *                     3.舰队出征( SGgo  )                  *\n"
-			 << "          *                     3.舰队改造( SGbu  )                  *\n"
+			 << "          *                     3.舰队出征( SGgo  )                  *\n"	//继续游戏
+			// << "          *                     3.舰队改造( SGbu  )                  *\n"
 			 << "          *                     4.主线任务( MStory)                  *\n"
 			 << "          *                     5.支线任务( SStory )                 *\n"
+			 <<	"          *                     6.读取游戏( Load)                    *\n"
+			 <<	"          *                     7.保存游戏( Save)                    *\n"
 			 << "          *                                                          *\n";
 	
 	cout << "          ";
 	for (int i = 0; i < 60; i++)
 		cout << "*";
 	
-/*	map<string, gc>Gcm;		//新建map并且使string对应函数
+	map<string, gc>Gcm;		//新建map并且使string对应函数
 	Gcm["SGedit"] = Gcom::Start;
-	Gcm["SGbulid"] = Gcom::Continue;
-	Gcm["SGgo"] = Gcom::Help;
-	Gcm["SGbu"] = Gcom::Exit;
-	Gcm["MStory"] = Gcom::;
-	Gcm["SStory"] = Gcom::;
+	Gcm["SGbulid"] = Gbui::BRandom;
+	//Gcm["SGgo"] = Gsta::GameStart;
+	//Gcm["SGbu"] = Gcom::;
+	//Gcm["MStory"] = Gsto::;
+	//Gcm["SStory"] = Gcom::;
 	while (1) {
 
 		string user_in;
@@ -112,5 +110,5 @@ void Gsta::GameHom()
 			cout << "请输入正确的命令,注意区分大小写.请重试:" << endl;
 			system("pause");
 		}
-	}*/
+	}
 }

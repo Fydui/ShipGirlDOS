@@ -5,15 +5,9 @@ using namespace std;
 using namespace Gcom;
 using namespace Gsta;
 
-GameStory::GameStory()
-{
-	M_1_1();
-}
-
-void GameStory::M_1_1() 
+void Gsto::M_1_1() 
 {	
-	//File_o("./StoryTXT/SS.txt", "#", 122);
-	//Gbui::SQL_();
+	
 	//File_o("./StoryTXT/M_1_1.txt","#",7);
 	system("pause");
 	system("CLS");
@@ -24,7 +18,7 @@ void GameStory::M_1_1()
 	//Gsta::GameHom();
 }
 
-void GameStory::File_o(string name, string fenge,int sum)
+void Gsto::File_o(string name, string fenge,int sum)
 {
 
 	ifstream infile(name);			//打开文件
@@ -60,6 +54,3 @@ void GameStory::File_o(string name, string fenge,int sum)
 	}
 }
 
-GameStory::~GameStory()
-{	
-}

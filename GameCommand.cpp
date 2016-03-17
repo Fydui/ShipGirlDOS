@@ -7,14 +7,19 @@ using namespace Gsta;
 
 
 
-void Gcom::Start() 
+void Gcom::Start()
 {
-	Gsta::GameStart();
+	Gsto::M_1_1();
 }
 
-void Gcom::Continue()
+void Gcom::Save()
 {
-	cout << "¼ÌÐø";
+	//
+}
+
+void Gcom::Load() 
+{
+	//
 }
 
 void Gcom::SGedit()

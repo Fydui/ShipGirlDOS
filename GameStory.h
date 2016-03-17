@@ -9,14 +9,9 @@
 #include <fstream>
 #include<vector>
 
-class GameStory
+
+namespace Gsto
 {
-public:
-	GameStory();
 	void M_1_1();
 	void File_o(string name, string fenge, int sum);
-	~GameStory();
-private:
-	//
-};
-
+}
