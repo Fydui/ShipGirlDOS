@@ -9,9 +9,10 @@
 #include <fstream>
 #include<vector>
 
+using namespace std;
 
 namespace Gsto
 {
 	void M_1_1();
-	void File_o(string name, string fenge, int sum);
+	void File_o(string name,string fenge,int sum);
 }

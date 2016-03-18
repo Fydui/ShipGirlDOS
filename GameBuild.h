@@ -1,6 +1,7 @@
 #pragma once 
 #define  __INCLUDE_SQL_LITE_HELPER_H__  
 #include <iostream>
+#include "GameCommand.h"
 #include "sqlite3.h"
 #include <time.h>  
 #include <stdlib.h>  
@@ -31,5 +32,5 @@ namespace Gbui
 	void ExecSQL(char *sql);
 	char **SrawQuery(char *sql, int *row, int *column, char **result);
 	string RetBu(string BU);
-	//string SGO;
+	
 }

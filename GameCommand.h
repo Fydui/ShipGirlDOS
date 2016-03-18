@@ -12,7 +12,7 @@ namespace Gcom {
 	void Help();		//窝是萌萌的帮助~
 	void Exit();		//我是退出哦
 	void Load();		//读取
-	void Save();		//保存
+	void Save(char** Arg_s);		//保存
 	void SGedit();		//舰队编辑
 	void Ret();			//窝是返回
 	

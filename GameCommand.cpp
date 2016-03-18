@@ -12,14 +12,31 @@ void Gcom::Start()
 	Gsto::M_1_1();
 }
 
-void Gcom::Save()
+void Gcom::Save(char** Arg_s)
 {
-	//
+	char* Arg[5];
+	Arg[0] = Arg_s[0];
+	Arg[1] = "# ";	//添加分隔符
+	ofstream oufile("Load.txt",ios::app);	//打开存档文件
+	for (int j = 0; j < 2; j++)
+		oufile << Arg[j];
+	cout << "提督,存档成功~" << endl;
 }
 
 void Gcom::Load() 
 {
-	//
+	char* fou = new char[225];
+	ifstream infile("Load.txt");
+	if (!infile.is_open())
+	{
+		cout << "读取文档失败,请不要偷渡欧洲哦~" << endl;
+		system("pause");
+	}
+	while (!infile.eof())
+	{
+		infile.getline(fou,0);
+		Gbui::RetBu(fou);
+	}
 }
 
 void Gcom::SGedit()

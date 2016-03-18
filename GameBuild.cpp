@@ -3,9 +3,10 @@
 
 //#define random(x) (rand()%x)
 
-
+using namespace Gcom;
 using namespace Gbui;
 using namespace std;
+
 
 int lat;
 sqlite3* conn = NULL;
@@ -155,21 +156,15 @@ char ** Gbui::SrawQuery(char * sql, int * row, int * column, char ** result)
 int Gbui::UserResult(void *NotUsed, int argc, char **argv, char **azColName)	//将Selectuserd建造出来的数据输出存储
 {	
 	
-	string Arg_s[15];
-	string Arg[5];
-	ofstream oufile("Load.txt");	//打开存档文件
+	char* Arg_s[15];
 	for (int i = 0; i < argc; i++)
 	{
 		cout << azColName[i] << " = " << (argv[i] ? argv[i] : "NULL") << ". ";
-		Arg_s[i] = (argv[i] ? argv[i] : "NULL");
-	
+		Arg_s[i] = (argv[i] ? argv[i] : "NULL");	
 		RetBu(Arg_s[i]);	//将属性传递出去
 		//cout <<  Arg_s[i] << endl;
 	}
-	Arg[0] = Arg_s[0];	
-	Arg[1] = "# ";	//添加分隔符
-	for (int j = 0; j < 2;j++)
-	oufile << Arg[j];
+	Gcom::Save(Arg_s);
 	
 	cout << endl;
 	

@@ -18,7 +18,7 @@ void Gsto::M_1_1()
 	//Gsta::GameHom();
 }
 
-void Gsto::File_o(string name, string fenge,int sum)
+void Gsto::File_o(string name,string fenge,int sum)
 {
 
 	ifstream infile(name);			//打开文件
