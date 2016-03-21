@@ -112,3 +112,16 @@ void Gsta::GameHom()
 		}
 	}
 }
+
+void Gsta::ou_Load(char* ou)
+{
+	//cout << ou;
+	string u = ou;
+	vector<string>st;
+	st = Split(u, "#");
+	//int j = ;
+	for (int i = 0; i < j; i++)
+	{
+	cout << st.at(i);
+	}
+}

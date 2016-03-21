@@ -17,6 +17,7 @@
 
 #pragma comment(lib, "sqlite3.lib")
 using namespace std;
+extern int bsum = 0;
 
 namespace Gbui
 {	

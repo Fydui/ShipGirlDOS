@@ -14,10 +14,11 @@ void Gcom::Start()
 
 void Gcom::Save(char** Arg_s)
 {
+	//将辣条数存进来(未完成)
+	//将关卡数存进来(未完成)
 	char* Arg[5];
 	Arg[0] = Arg_s[0];
-	Arg[1] = "# ";	//添加分隔符
-	ofstream oufile("Load.txt",ios::app);	//打开存档文件
+	ofstream oufile("Load.txt",ios::app);	//打开存档文件 把船id传进来(完成)
 	for (int j = 0; j < 2; j++)
 		oufile << Arg[j];
 	cout << "提督,存档成功~" << endl;
@@ -25,7 +26,7 @@ void Gcom::Save(char** Arg_s)
 
 void Gcom::Load() 
 {
-	char* fou = new char[225];
+	
 	ifstream infile("Load.txt");
 	if (!infile.is_open())
 	{
@@ -33,9 +34,10 @@ void Gcom::Load()
 		system("pause");
 	}
 	while (!infile.eof())
-	{
-		infile.getline(fou,0);
-		Gbui::RetBu(fou);
+	{	
+		char fou[225] = "";
+		infile.getline(fou,225);
+		Gsta::ou_Load(fou);		
 	}
 }
 

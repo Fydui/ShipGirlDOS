@@ -13,6 +13,7 @@ namespace Gsta {
 		void Gmap();
 		void GameSta(); //最开始的界面
 		void GameHom(); //玩家界面
+		void ou_Load(char* ou); //将load读取的存档输出
 
 }
 
