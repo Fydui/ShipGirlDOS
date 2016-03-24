@@ -17,11 +17,11 @@
 
 #pragma comment(lib, "sqlite3.lib")
 using namespace std;
-extern int bsum = 0;
+//extern int bsum = 0;
 
 namespace Gbui
-{	
-	
+{
+
 	void Open_DB(char* sql);
 	void Close_DB();
 	void SGbuild();
@@ -30,8 +30,9 @@ namespace Gbui
 	int SelectUser(int bu);  //抽出大建出的数据
 	void BRandom();			 //生成随机数,用来大建0v0
 	int LA_T(int l);	//辣条计数专用函数只要998
-	void ExecSQL(char *sql);
-	char **SrawQuery(char *sql, int *row, int *column, char **result);
+	void ExecSQL(char *sql);//写完用这个添加数据库
+	char **SrawQuery(char *sql, int *row, int *column, char **result);//用这个手写数据库 写完用面的添加到数据库
+	//void SQL_();	//手写数据库用的= =
+	void xunhuan();
 	string RetBu(string BU);
-	
 }

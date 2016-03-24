@@ -119,7 +119,7 @@ void Gsta::ou_Load(char* ou)
 	string u = ou;
 	vector<string>st;
 	st = Split(u, "#");
-	//int j = ;
+	int j = 2;
 	for (int i = 0; i < j; i++)
 	{
 	cout << st.at(i);

@@ -7,8 +7,9 @@ using namespace Gsta;
 
 void Gsto::M_1_1() 
 {	
-	
+	//Gbui::SQL_();
 	//File_o("./StoryTXT/M_1_1.txt","#",7);
+	//Gbui::SQL_();
 	system("pause");
 	system("CLS");
 	cout << "¹§Ï²¹ý¹Ø" << endl;

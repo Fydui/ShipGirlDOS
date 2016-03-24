@@ -16,13 +16,17 @@ void Gcom::Save(char** Arg_s)
 {
 	//将辣条数存进来(未完成)
 	//将关卡数存进来(未完成)
-	char* Arg[5];
+
+
+	/*char* Arg[5];
 	Arg[0] = Arg_s[0];
 	ofstream oufile("Load.txt",ios::app);	//打开存档文件 把船id传进来(完成)
 	for (int j = 0; j < 2; j++)
-		oufile << Arg[j];
+		oufile << Arg[j];*/
+
 	cout << "提督,存档成功~" << endl;
 }
+
 
 void Gcom::Load() 
 {
@@ -49,7 +53,7 @@ void Gcom::SGedit()
 void Gcom::Exit() 
 {
 
-	cout << "拜拜~记得回来哦~" << endl;
+	cout << "拜拜~已经存好档了~记得回来哦~" << endl;
 	exit(0);
 }
 void Gcom::Help() 
@@ -73,6 +77,31 @@ void Gcom::Ret()
 {
 	cout << "输入Ret返回";
 
+}
+
+void Gcom::in_ini(string id, int lv)
+{
+	string ship_id_key = "ID";
+	string ship_lv_key = "LV";
+	string o_id = id;
+	int o_lv = lv;
+
+	IniFile ini("loadfile.txt");
+	if (!ini.write(ship_id_key, o_id))
+	{
+		cout << "读取存档失败,退出游戏..QAQ" << endl;
+		exit(1);
+	}
+	if (!ini.write(ship_lv_key, o_lv))
+	{
+		cout << "读取存档失败,退出游戏..QAQ" << endl;
+		exit(1);
+	}
+}
+
+void Gcom::ou_ini()
+{
+	//
 }
 
 string Gcom::ReadFile(string name) { //读取文件函数
