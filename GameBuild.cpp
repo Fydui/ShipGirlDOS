@@ -91,8 +91,6 @@ void Gbui::BRandom()	//大建随机函数
 		SelectUser(S4);
 	}
 	
-		 
-	
 	
 }
 
@@ -108,7 +106,7 @@ char ** Gbui::SrawQuery(char * sql, int * row, int * column, char ** result)
 	return result;
 }
 
-/*void Gbui::SQL_()
+/*void Gbui::SQL_()					//手写数据库 只有这样才不会乱码......别打我...
 {
 	Open_DB(sql);
 	char* sq_1 = "CREATE TABLE SG(                           
@@ -388,7 +386,7 @@ char ** Gbui::SrawQuery(char * sql, int * row, int * column, char ** result)
 	ExecSQL(sq_128);
 
 	Close_DB();
-}*/
+}
 
 void Gbui::xunhuan()
 {
@@ -408,7 +406,7 @@ void Gbui::xunhuan()
 	}
 
 }
-
+*/
 int Gbui::UserResult(void *NotUsed, int argc, char **argv, char **azColName)	//将Selectuserd建造出来的数据输出存储
 {	
 	
@@ -465,8 +463,10 @@ int Gbui::SelectUser(int bu) //调出数据函数
 
 int Gbui::LA_T(int l)
 {
-	lat += l;
+	lat += l;	//辣条+N
 	cout << "提督咱的辣条数为:" << lat << "根~" << endl;
+	LT_s = lat;	//将当前辣条数传给LT_s
+	Gcom::Save(NULL);//随手存档好习惯233
 	return lat;
 }
 

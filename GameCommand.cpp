@@ -104,6 +104,13 @@ void Gcom::ou_ini()
 	//
 }
 
+int Gcom::GK_Num()
+{
+	Gk_s++;			 //每调用一次都将关卡数+1
+	Gcom::Save(NULL);//然后存档
+	return Gk_s++;
+}
+
 string Gcom::ReadFile(string name) { //读取文件函数
 
 	ifstream infile(name);			//打开文件

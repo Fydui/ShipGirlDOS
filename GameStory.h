@@ -10,6 +10,7 @@
 #include<vector>
 
 using namespace std;
+extern int Gk_s;
 
 namespace Gsto
 {
